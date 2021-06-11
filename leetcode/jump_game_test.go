@@ -15,6 +15,9 @@ import (
 // 输入：nums = [2,3,1,1,4]
 // 输出：true
 // 解释：可以先跳 1 步，从下标 0 到达下标 1, 然后再从下标 1 跳 3 步到达最后一个下标。
+
+// 思路：每次更新能跳到的最远距离，
+// 当前位置超过最远能跳到的距离时，返回false
 func canJump(nums []int) bool {
 	max := 0
 	for i := range nums {
@@ -28,13 +31,12 @@ func canJump(nums []int) bool {
 	return true
 }
 
-func Test_CanJump_Case1(t *testing.T) {
+func Test_CanJump(t *testing.T) {
 	input, except := testdata.JumpGameTestData()
 	for i := range input {
 		canJump := canJump(input[i])
 		if canJump != except[i] {
-			t.Fatalf("can't jump")
+			t.Fatalf("can't jump, got: %v, test data: %v", canJump, input[i])
 		}
 	}
-
 }
