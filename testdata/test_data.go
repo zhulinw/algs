@@ -21,7 +21,13 @@ func JumpGameTestData() ([][]int, []bool) {
 }
 
 func ClimbStairsTestData() ([]int, []int) {
-	input := []int{2,3,5,23,44}
-	except := []int{2,3,8,46368,1134903170}
+	input := []int{2, 3, 5, 23, 44}
+	except := []int{2, 3, 8, 46368, 1134903170}
+	return input, except
+}
+
+func ClimbFibTestData() ([]int, []int) {
+	input := []int{2}
+	except := []int{1}
 	return input, except
 }
