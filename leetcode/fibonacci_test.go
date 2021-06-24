@@ -3,7 +3,7 @@ package leetcode
 import (
 	"testing"
 
-	"github.com/gruntpig/algs/testdata"
+	"github.com/gruntpig/algs/leetcode/testdata"
 )
 
 // 剑指 Offer 10- I. 斐波那契数列

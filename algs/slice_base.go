@@ -1,9 +1,4 @@
-package chapter1
-
-import (
-	"fmt"
-	"math"
-)
+package algs
 
 // @Feature 典型数组处理
 // @需求 找出数组元素最大的元素
@@ -53,45 +48,3 @@ func ReverseSlice(s []int) []int {
 func MatrixMulDoubleDimensional(s []int) []int {
 	return nil
 }
-
-// @Feature 二分查找
-// @需求
-func BinarySearch(s []int, ele int) int {
-	low := 0
-	high := len(s)
-	for low < high {
-		mid := (low + high) / 2
-		midValue := s[mid]
-		if midValue == ele {
-			return ele
-		}
-		if midValue > ele {
-			high = mid
-		}
-		if midValue < ele {
-			low = mid
-		}
-	}
-	return math.MaxInt32 // not find
-}
-
-// @Feature 二分查找, 递归实现
-// @需求
-func RecurBinarySearch(s []int, low, high, ele int) int {
-	fmt.Println("low:", low, "high:", high)
-	mid := low + (high - low)/2
-
-	if low >= high {
-		return -1
-	}
-
-	if s[mid] > ele {
-		return RecurBinarySearch(s, low, mid, ele)
-	}else if s[mid] < ele {
-		return RecurBinarySearch(s, mid, high, ele)
-	}else {
-		return ele
-	}
-}
-
-

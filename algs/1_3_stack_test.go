@@ -1,8 +1,9 @@
-package chapter1
+package algs
 
 import (
-	"github.com/gruntpig/algs/utils"
 	"testing"
+
+	"github.com/gruntpig/algs/utils"
 )
 
 func TestEvaluate(t *testing.T) {

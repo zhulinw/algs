@@ -1,20 +1,20 @@
-package chapter1
+package algs
 
 import (
-	"github.com/gruntpig/algs/struct/stack"
 	"strconv"
+
+	"github.com/gruntpig/algs/container/stack"
 )
 
 func Evaluate(s string) int {
 	ops := stack.NewStack()
 	vals := stack.NewStack()
 
-
 	for _, ele := range s {
 		if ele == '(' {
-		}else if isOp(ele) {
+		} else if isOp(ele) {
 			ops.Pop(ele)
-		}else if ele == ')'{
+		} else if ele == ')' {
 			val := vals.Push().(int)
 			op := ops.Push()
 			if op == '+' {
@@ -34,7 +34,7 @@ func Evaluate(s string) int {
 				val = e / val
 			}
 			vals.Pop(val)
-		}else {
+		} else {
 			val, _ := strconv.Atoi(string(ele))
 			vals.Pop(val)
 		}

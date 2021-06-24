@@ -3,7 +3,7 @@ package leetcode
 import (
 	"testing"
 
-	"github.com/gruntpig/algs/testdata"
+	"github.com/gruntpig/algs/leetcode/testdata"
 	"github.com/gruntpig/algs/utils"
 )
 
